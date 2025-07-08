@@ -1,0 +1,55 @@
+.h1{
+    text-align: center;
+    font-size: larger;
+    background-color: aqua;
+}
+.img-row {
+  border:5px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: blanchedalmond;
+  gap: 5px; 
+  margin:0 4px;
+  text-align:center;
+}
+
+img  {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+
+
+.footer{
+    width:100%;
+    justify-content: center;
+    display:flex;
+    background-color: aqua;
+    font-size: medium;
+    color:black;
+    
+}
+@keyframes sildeIn{
+  from {
+    
+    transform: translateX(100%) ;
+  }
+  TO{
+   
+    transform: translateX(0) ;
+  }
+}
+
+.img-row img{
+animation-name: sildeIn;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+
+}
+h4{
+animation-name: sildeIn;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-delay: 2s;
+}
