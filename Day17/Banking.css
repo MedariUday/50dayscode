@@ -1,0 +1,23 @@
+#deposit{
+    margin-left:600px;
+    margin-right:50px;
+    padding: 10px;
+}
+#h1,#para{
+    text-align: center;
+}
+#withdraw,#check-balance{
+    padding:10px;
+}
+#check-balance{
+    margin-left:50px;
+}
+#deposit:hover{
+    background-color: lightgreen;
+}
+#check-balance:hover{
+    background-color: lightgreen;
+}
+#withdraw:hover{
+    background-color: lightgreen;
+}
