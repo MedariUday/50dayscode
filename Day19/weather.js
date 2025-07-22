@@ -1,9 +1,15 @@
 
 async function getData(){
     let cityName=document.getElementById('name').value;
+    try{
     let url=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=1801d39372c536d4a4f266105a47e49c`);
+    if (!response.ok) {
+            throw new Error("City not found or API error");
+        }
     let data=await url.json();
+    
     console.log(data);
+    
     document.querySelector(".container1").style.display = "block";
     document.getElementById("cityname").innerHTML=data.name;
     document.getElementById("temp").innerHTML=data.main.temp;
@@ -34,4 +40,8 @@ async function getData(){
     let iconImg = document.getElementById("weather-icon");
         iconImg.src = iconUrl;
         iconImg.alt = data.weather[0].description;
+}
+catch(error){
+    console.error("Error fetching weather data:", error);
+}
 }
