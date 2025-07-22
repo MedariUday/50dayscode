@@ -23,6 +23,9 @@ async function getData(){
         case "sunny":
             document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfav-S7nmyC_r-QMdnPLDgduVatlBDpSXxKQ&s')";
             break;
+        case "thunderstorm":
+            document.body.style.backgroundImage = "url('https://media.istockphoto.com/id/517643357/photo/thunderstorm-lightning-with-dark-cloudy-sky.jpg?s=612x612&w=0&k=20&c=x3G3UijRPVGFMFExnlYGbnQtnlH6-oUoMU48BTkc0Os=')";
+            break;
         default:
             document.body.style.backgroundImage = "url('https://cdn.pixabay.com/photo/2021/01/11/08/53/sky-5907605_1280.jpg')";
     }
