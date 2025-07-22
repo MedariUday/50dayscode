@@ -4,6 +4,7 @@ async function getData(){
     let url=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=1801d39372c536d4a4f266105a47e49c`);
     let data=await url.json();
     console.log(data);
+    document.querySelector(".container1").style.display = "block";
     document.getElementById("cityname").innerHTML=data.name;
     document.getElementById("temp").innerHTML=data.main.temp;
     document.getElementById("pressure").innerHTML=data.main.pressure;
@@ -25,4 +26,9 @@ async function getData(){
         default:
             document.body.style.backgroundImage = "url('https://cdn.pixabay.com/photo/2021/01/11/08/53/sky-5907605_1280.jpg')";
     }
+    let iconCode = data.weather[0].icon;
+    let iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    let iconImg = document.getElementById("weather-icon");
+        iconImg.src = iconUrl;
+        iconImg.alt = data.weather[0].description;
 }
